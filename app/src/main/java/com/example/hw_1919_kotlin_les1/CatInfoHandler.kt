@@ -7,19 +7,23 @@ class CatInfoHandler {
     var catList = mutableListOf<Cat>(
         Cat("Fedor", 12, "Markis"),
         Cat("Fedor", 12, "Markis"),
-        (Cat("Timon", 2, "Tabby"))
+        Cat("Timon", 2, "Tabby"),
+        Cat("Roxy", 3, "Grey"),
+        Cat("Salem", 5, "Black")
     )
     var kittyList = listOf<Kitty>(
         Kitty("William", 2, "ColorPoint"),
         Kitty("William", 2, "ColorPoint"),
-        Kitty("Buny", 5, "Tortoiseshell ")
+        Kitty("Buny", 5, "Tortoiseshell"),
+        Kitty("Toni", 3, "Grey"),
+        Kitty("Loly", 4, "Ginger")
+
     )
 
     /**
      * Функция возвращает 1 элемент из коллекции j объектов Cat
      */
     fun getRandomCat(cats: List<Cat>): Cat {
-        comparingClassObject()
         val x: Int = (cats.indices).random()
         return cats[x]
     }
@@ -36,7 +40,6 @@ class CatInfoHandler {
      * Функция возвращает 1 элемент из коллекции объектов класса Kitty
      */
     fun getRandomKitty(kittens: List<Kitty>): Kitty {
-        comparingClassObject()
         val x: Int = (kittens.indices).random()
         return kittens[x]
     }
@@ -51,7 +54,7 @@ class CatInfoHandler {
     /**
      * Функция сравнивает объекты классов Cat и Kitty, чтобы посмотреть разность реальзации equals(0)
      */
-    private fun comparingClassObject() {
+    fun comparingClassObject() {
         createObjectByCopy()
         Log.i("###", if (kittyList[0] == kittyList[1]) "true" else "false")
         Log.i("###", if (catList[0] == catList[1]) "true" else "false")

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             textInfo.text = CatInfoHandler().getKittyInfo(CatInfoHandler().getRandomKitty(CatInfoHandler().kittyList))
 
         }
+        CatInfoHandler().comparingClassObject()
 
     }
 }
