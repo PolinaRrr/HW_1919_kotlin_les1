@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HW_1919_kotlin_les1</string>
+    <string name="textView_information_about_cats">Information about cats</string>
+    <string name="button_random_cat">Random cat</string>
+    <string name="button_random_kitty">Random kitty</string>
 </resources>
